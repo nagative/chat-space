@@ -1,9 +1,5 @@
-<<<<<<< HEAD
+
 chat-space db design
-=======
-chat-space dev
-====
->>>>>>> master
 
 Overview
 
