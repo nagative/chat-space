@@ -1,0 +1,133 @@
+
+.notificate {
+  background-color: #38AEF0;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  height: 100%;
+  width:  100%;
+  .side-bar {
+    height: 100%;
+    width: 300px;
+    color: #FFFFFF;
+    float: left;
+    .header {
+      background-color: #253141;
+      height: 100px;
+      line-height: 100px;
+      padding: 0 20px;
+      .header__name {
+        font-weight: bold;
+        font-size: 16px;
+        float:left;
+      }
+      .header__lists {
+        float: right;
+        .list {
+          float: right;
+        }
+      }
+    }
+    .groups {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      .group {
+        padding: 20px 0 40px;
+        .group__sub {
+          padding-top: 5px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .chat {
+    width: calc(100% - 300px);
+    float: right;
+    .header {
+      height: 100px;
+      padding: 0 40px;
+      .left-header {
+        float: left;
+        .left-header__title {
+          color: #333333;
+          font-size: 20px;
+          margin-top: 35px;
+        }
+        .left-header__members {
+            color: #999999;
+            font-size: 12px;
+            margin-top: 15px;
+          .member {
+              padding-right: 5px;
+            }
+          }
+      }
+      .right-header {
+        border: 1px solid #38AEF0;
+        color: #38AEF0;
+        float: right;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 28px;
+        padding:0 20px;
+      }
+    }
+    .messages {
+      background-color: #FAFAFA;
+      height: 70vh;
+      overflow: scroll;
+      padding: 46px 40px 0;
+      color: #434A54;
+      .user-name {
+        font-size: 16px;
+        font-weight: bold;
+        float:left;
+        padding-right: 10px;
+      }
+      .time {
+        font-size: 12px;
+        color: #999999;
+        float: left;
+      }
+      .message {
+        font-size: 14px;
+        color: #434A54;
+        clear: both;
+      }
+    }
+    .form {
+      background-color: #DDDDDD;
+      height: 90px;
+      width: calc(100% - 40px);
+      padding-left: 40px;
+      clear: both;
+      .form__message {
+        height: 50px;
+        width: calc(100% - 15%);
+        margin: 20px 0;
+        float: left;
+        position: relative;
+      }
+        .upload-label {
+          position: absolute;
+          bottom: 0;
+          right: 170px;
+        }
+      .form__submit {
+        height: 50px;
+        float: right;
+        margin: 20px 40px 0 0;
+        padding: 0 20px;
+        background-color: #38AEF0;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+  }
+}
