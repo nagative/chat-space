@@ -1,49 +1,39 @@
-!!!
-%html{lang: "ja"}
-  %head
-    %meta{charset: "utf-8"}
-  %body
-    .notificate チャットグループが生成されました。
-    .wrapper
-      .side-bar
-        .header
-          %h3.header__name
-            nagata
-          %ul.header__lists
-            %li.list
-            %i.fa.fa-edit.fa-lg
-            %li.list
-            %i.fa.fa-cog.fa-lg
-        .groups
-          .group
-            group1
-            .group__sub
-              test
-      .chat
-        .header
-          .left-header
-            .left-header__title
-              group1
-            %ul.left-header__members
-              nagata
-              %li.member
-          .right-header
-            %a.right-header__button
-              Edit
-
-        .messages
-          %p.user-name
-            haml
-          %p.time
-            2018/05/10 16:45:45
-          %p.message
-            scss
-
-        .form
-          %input.form__message
-            %label.upload-label{for: "upload-icon"}
-              %i.fa.fa-picture-o
-            /   / = f.file_field :image, id: "upload-icon"
-          .form__submit
-            SEND
-
+.notificate チャットグループが生成されました。
+.wrapper
+  .side-bar
+    .side-bar__header
+      %h3.header__name
+        nagata
+      %ul.header__lists
+        %li.i.fa.fa-edit.fa-lg
+        %li.i.fa.fa-cog.fa-lg
+    .groups
+      .group
+        group1
+        .group__sub
+          test
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          group1
+        .left-header__member
+          Member :
+      .right-header
+        %a.right-header__button
+          Edit
+    .messages
+      %p.user-name
+        haml
+      %p.time
+        2018/05/10 16:45:45
+      %p.message
+        scss
+    .form
+      %form.comment
+        .chat-space
+          %input.text-space{:name => "text", :placeholder => "type a message", :type => "text", :size => 95}
+          %label{:for => "upload-icon"}
+            %i.fa.fa-picture-o
+            %input#upload-icon{:style => "display:none;", :type => "file"}
+          %input.submit{:type => "submit", :value => "Send"}
