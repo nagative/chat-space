@@ -1,0 +1,29 @@
+.notificate チャットグループが生成されました。
+.wrapper
+  .side-bar
+    .side-bar__header
+      %h3.header__name
+        nagata
+      %ul.header__lists
+        %li.i.fa.fa-edit.fa-lg
+        %li.i.fa.fa-cog.fa-lg
+    = render partial: "group"
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          group1
+        .left-header__member
+          Member :
+      .right-header
+        = link_to 'Edit', "" , {class:"right-header__button"}
+    .messages
+      = render partial: "message"
+    .form
+      %form.form__comment
+        .form__chat-space
+          %input.form__space{:name => "text", :placeholder => "type a message", :type => "text", :size => 95}
+          %label.form__icon{:for => "upload-icon"}
+            %i.fa.fa-picture-o
+            %input#upload-icon{:style => "display:none;", :type => "file"}
+          %input.form__button{:type => "submit", :value => "Send"}
