@@ -7,11 +7,7 @@
       %ul.header__lists
         %li.i.fa.fa-edit.fa-lg
         %li.i.fa.fa-cog.fa-lg
-    .groups
-      .group
-        group1
-        .group__sub
-          test
+    = render partial: "group"
   .chat
     .header
       .left-header
@@ -20,20 +16,14 @@
         .left-header__member
           Member :
       .right-header
-        %a.right-header__button
-          Edit
+        = link_to 'Edit', "" , {class:"right-header__button"}
     .messages
-      %p.user-name
-        haml
-      %p.time
-        2018/05/10 16:45:45
-      %p.message
-        scss
+      = render partial: "message"
     .form
-      %form.comment
-        .chat-space
-          %input.text-space{:name => "text", :placeholder => "type a message", :type => "text", :size => 95}
-          %label{:for => "upload-icon"}
+      %form.form__comment
+        .form__chat-space
+          %input.form__space{:name => "text", :placeholder => "type a message", :type => "text", :size => 95}
+          %label.form__icon{:for => "upload-icon"}
             %i.fa.fa-picture-o
             %input#upload-icon{:style => "display:none;", :type => "file"}
-          %input.submit{:type => "submit", :value => "Send"}
+          %input.form__button{:type => "submit", :value => "Send"}

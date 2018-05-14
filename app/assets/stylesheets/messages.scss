@@ -1,24 +1,18 @@
-$whiteFontColor: #FFFFFF;
-
-html, body {
-  height: 100%;
-}
+@import './variable';
 
 .notificate {
-  background-color: #38AEF0;
+  background-color: $skyblue;
   height: 30px;
   width: 100%;
   text-align: center;
-  color: $whiteFontColor;
+  color: $white;
 }
 
 .wrapper {
-  height: 100%;
-  width:  100%;
   .side-bar {
     height: 100%;
     width: 300px;
-    color: $whiteFontColor;
+    color: $white;
     float: left;
     &__header {
       background-color: #253141;
@@ -56,7 +50,6 @@ html, body {
 
   .chat {
     width: calc(100% - 300px);
-    height: 100%;
     float: right;
     .header {
       height: 100px;
@@ -69,14 +62,14 @@ html, body {
           margin-top: 35px;
         }
         &__member {
-          color: #999999;
+          color: $gray;
           font-size: 12px;
           margin-top: 15px;
         }
       }
       .right-header {
-        border: 1px solid #38AEF0;
-        color: #38AEF0;
+        border: 1px solid $skyblue;
+        color: $skyblue;
         float: right;
         height: 40px;
         line-height: 40px;
@@ -86,7 +79,7 @@ html, body {
     }
     .messages {
       background-color: #FAFAFA;
-      height: calc(100% - 235px) ;
+      height: calc(100vh - 235px);
       overflow: scroll;
       padding: 46px 40px 0;
       color: #434A54;
@@ -98,7 +91,7 @@ html, body {
       }
       .time {
         font-size: 12px;
-        color: #999999;
+        color: $gray;
         float: left;
       }
       .message {
@@ -110,12 +103,12 @@ html, body {
     .form {
       background-color: #DDDDDD;
       height: 90px;
-      form.comment {
+      .form__comment {
         font-size: 16px;
-        .chat-space {
+        .form__chat-space {
           padding: 20px 40px;
           position: relative;
-          input.text-space {
+          .form__space {
             height: 50px;
             color: #434A54;
             float: left;
@@ -124,14 +117,14 @@ html, body {
             min-width: 300px;
             padding-left: 10px;
           }
-          label {
+          .form__icon {
               position: absolute;
               top: 35px;
               right: 190px;
             }
-          input.submit {
-            background-color: #38AEF0;
-            color: $whiteFontColor;
+          .form__button {
+            background-color: $skyblue;
+            color: $white;
             float:right;
             padding: 0 30px;
             line-height: 50px;
