@@ -5,9 +5,12 @@
       %h3.header__name
         nagata
       %ul.header__lists
-        %li.i.fa.fa-edit
-        %li.i.fa.fa-cog
-          - link_to '', "/users/#{current_user.id}/edit"
+        %li.list
+          = link_to new_group_path do
+            = fa_icon "cog", class: "i"
+        %li.list
+          = link_to edit_user_path(current_user) do
+            = fa_icon "edit", class: "i"
     = render partial: "group"
   .chat
     .header
@@ -17,14 +20,14 @@
         .left-header__member
           Member :
       .right-header
-        = link_to 'Edit', "" , {class:"right-header__button"}
+        = link_to 'Edit', "" , class: "right-header__button"
     .messages
       = render partial: "message"
     .form
       %form.form__comment
         .form__chat-space
-          %input.form__space{:name => "text", :placeholder => "type a message", :type => "text", :size => 95}
-          %label.form__icon{:for => "upload-icon"}
+          %input.form__space{name: "text", placeholder: "type a message", type: "text", size: 95}
+          %label.form__icon{for: "upload-icon"}
             %i.fa.fa-picture-o
-            %input#upload-icon{:style => "display:none;", :type => "file"}
-          %input.form__button{:type => "submit", :value => "Send"}
+            %input#upload-icon{style: "display:none;", type: "file"}
+          %input.form__button{type: "submit", value: "Send"}
