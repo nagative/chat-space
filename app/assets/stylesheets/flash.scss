@@ -1,0 +1,16 @@
+@import './variable';
+
+.flash-notice {
+  color: $white;
+  text-align: center;
+  background-color: $skyblue;
+  &__alert{
+    background-color: red;
+    text-align: center;
+  }
+  &__notice{
+    background-color: $skyblue;
+    text-align: center;
+  }
+}
+

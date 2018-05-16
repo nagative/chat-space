@@ -1,12 +1,13 @@
-.notificate チャットグループが生成されました。
+.notificate
 .wrapper
   .side-bar
     .side-bar__header
       %h3.header__name
         nagata
       %ul.header__lists
-        %li.i.fa.fa-edit.fa-lg
-        %li.i.fa.fa-cog.fa-lg
+        %li.i.fa.fa-edit
+        %li.i.fa.fa-cog
+          - link_to '', "/users/#{current_user.id}/edit"
     = render partial: "group"
   .chat
     .header
