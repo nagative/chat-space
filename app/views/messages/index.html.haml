@@ -7,10 +7,10 @@
       %ul.header__lists
         %li.list
           = link_to new_group_path do
-            = fa_icon "cog", class: "i"
+            = fa_icon "pencil-square-o", class: "icon"
         %li.list
           = link_to edit_user_path(current_user) do
-            = fa_icon "edit", class: "i"
+            = fa_icon "cog", class: "icon"
     = render partial: "group"
   .chat
     .header
