@@ -9,24 +9,29 @@
 // }
 
 .wrapper {
+
   .side-bar {
     height: 100%;
     width: 300px;
     color: $white;
     float: left;
+
     &__header {
       background-color: #253141;
       height: 100px;
       line-height: 100px;
       padding: 0 20px;
+
       .header__name {
         font-weight: bold;
         font-size: 16px;
         float: left;
       }
+
       .header__lists {
         padding-left: 40px;
         float: right;
+
          .list {
            float: right;
          }
@@ -38,9 +43,17 @@
       height: calc(100vh - 100px);
       padding: 0 20px;
       clear: both;
+
+
       .group {
         padding: 20px 0 40px;
-        .group__sub {
+        color: $white;
+
+        &__sub {
+          font-size: 15px;
+        }
+
+        &__message {
           padding-top: 5px;
           font-size: 11px;
         }
@@ -51,22 +64,27 @@
   .chat {
     width: calc(100% - 300px);
     float: right;
+
     .header {
       height: 100px;
       padding: 0 40px;
+
       .left-header {
         float: left;
+
         &__title {
           color: #333333;
           font-size: 20px;
           margin-top: 35px;
         }
+
         &__member {
           color: $gray;
           font-size: 12px;
           margin-top: 15px;
         }
       }
+
       .right-header {
         border: 1px solid $skyblue;
         color: $skyblue;
@@ -77,37 +95,45 @@
         padding:0 20px;
       }
     }
+
     .messages {
       background-color: #FAFAFA;
       height: calc(100vh - 235px);
       overflow: scroll;
       padding: 46px 40px 0;
       color: #434A54;
+
       .user-name {
         font-size: 16px;
         font-weight: bold;
         float:left;
         padding-right: 10px;
       }
+
       .time {
         font-size: 12px;
         color: $gray;
         float: left;
       }
+
       .message {
         font-size: 14px;
         color: #434A54;
         clear: both;
       }
     }
+
     .form {
       background-color: #DDDDDD;
       height: 90px;
+
       .form__comment {
         font-size: 16px;
+
         .form__chat-space {
           padding: 20px 40px;
           position: relative;
+
           .form__space {
             height: 50px;
             color: #434A54;
@@ -117,11 +143,13 @@
             min-width: 300px;
             padding-left: 10px;
           }
+
           .form__icon {
               position: absolute;
               top: 35px;
               right: 190px;
             }
+
           .form__button {
             background-color: $skyblue;
             color: $white;
