@@ -1,6 +1,8 @@
 %p.user-name
-  haml
+  = message.user.name
 %p.time
-  2018/05/10 16:45:45
-%p.message
-  scss
+  = format_posted_time(message.created_at)
+- if message.content.present?
+  %p.message
+    = message.content
+= image_tag message.image.url, class: "message__image" if message.image.present?
