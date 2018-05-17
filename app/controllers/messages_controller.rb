@@ -4,4 +4,9 @@ class MessagesController < ApplicationController
 
   def create
   end
+
+  # private
+  # def image_params
+  #   params.require(:user).permit(:name, )
+  # end
 end
