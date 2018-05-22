@@ -1,8 +1,8 @@
 %p.user-name
   = message.user.name
 %p.time
-  = format_posted_time(message.created_at)
-- if message.content.present?
+  = message.created_at.to_s
+- if message.body.present?
   %p.message
-    = message.content
+    = message.body
 = image_tag message.image.url, class: "message__image" if message.image.present?

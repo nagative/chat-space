@@ -1,33 +1,22 @@
 .notificate
 .wrapper
-  .side-bar
-    .side-bar__header
-      %h3.header__name
-        nagata
-      %ul.header__lists
-        %li.list
-          = link_to new_group_path do
-            = fa_icon "pencil-square-o", class: "icon"
-        %li.list
-          = link_to edit_user_path(current_user) do
-            = fa_icon "cog", class: "icon"
-    = render partial: "group"
+  = render partial: "shared/side-bar"
   .chat
     .header
       .left-header
         .left-header__title
-          group1
+          = @group.name
         .left-header__member
-          Member :
+          Member : #{current_user.name}
       .right-header
         = link_to 'Edit', "" , class: "right-header__button"
     .messages
       = render @messages
     .form
-      %form.form__comment
-        .form__chat-space
-          %input.form__space{name: "text", placeholder: "type a message", type: "text", size: 95}
-          %label.form__icon{for: "upload-icon"}
-            %i.fa.fa-picture-o
-            %input#upload-icon{style: "display:none;", type: "file"}
-          %input.form__button{type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, class: 'form__space', placeholder: 'type a message'
+        .form__icon
+          = f.label :image, class: 'form__icon__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden',style:"display:none"
+        = f.submit 'Send', class: 'form__button'
