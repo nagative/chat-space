@@ -13,7 +13,7 @@
     .messages
       = render @messages
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html:{id: 'item_form'} do |f|
         = f.text_field :body, class: 'form__space', placeholder: 'type a message'
         .form__icon
           = f.label :image, class: 'form__icon__image' do
