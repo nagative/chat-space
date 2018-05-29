@@ -13,10 +13,10 @@
     .messages
       = render @messages
     .form
-      = form_for [@group, @message], html:{id: 'item_form'} do |f|
+      = form_for [@group, @message] do |f|
         = f.text_field :body, class: 'form__space', placeholder: 'type a message'
         .form__icon
           = f.label :image, class: 'form__icon__image' do
             = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden',style:"display:none"
+            = f.file_field :image, class: 'hidden',style:'display:none'
         = f.submit 'Send', class: 'form__button'

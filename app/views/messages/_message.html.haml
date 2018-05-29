@@ -5,6 +5,6 @@
     = message.created_at.to_s
 .lower-message
   - if message.body.present?
-    %p.lower-message__message
+    .lower-message__message
       = message.body
-  = image_tag message.image.url, class: "message__image" if message.image.present?
+  = image_tag message.image.url, class: "lower-message__image" if message.image.present?
