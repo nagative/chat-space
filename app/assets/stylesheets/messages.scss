@@ -28,33 +28,44 @@
         line-height: 40px;
         margin-top: 28px;
         padding:0 20px;
+        &__button {
+          color: $skyblue;
+          text-decoration: none;
+        }
       }
     }
-
     .messages {
       background-color: #FAFAFA;
-      height: calc(100vh - 235px);
+      height: calc(100vh - 190px);
       overflow: scroll;
       padding: 46px 40px 0;
       color: #434A54;
-      .user-name {
+      box-sizing: border-box;
+      .upper-message {
+        display: flex;
+        &__user-name {
         font-size: 16px;
         font-weight: bold;
-        float:left;
-        padding-right: 10px;
-      }
-      .time {
+        }
+        &__time {
         font-size: 12px;
         color: $gray;
-        float: left;
+        padding-left: 10px;
+        }
       }
-      .message {
+      .lower-message {
+        margin-top: 10px;
+        &__message {
         font-size: 14px;
+        margin-bottom: 40px;
         color: #434A54;
-        clear: both;
+        }
+        &__image {
+          height: 200px;
+          width: 200px;
+        }
       }
     }
-
     .form {
       background-color: #DDDDDD;
       height: 90px;

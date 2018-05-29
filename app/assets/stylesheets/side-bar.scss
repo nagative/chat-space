@@ -1,7 +1,6 @@
-@import './variable';
+@import 'variable';
 
 .side-bar {
-  // height: 100%;
   width: 300px;
   color: $white;
   float: left;
@@ -29,15 +28,15 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0 20px;
-    clear: both;
     .group {
+      box-sizing: border-box;
       padding: 20px 0 40px;
       &__sub {
         font-size: 15px;
         color: $white;
       }
       &__message {
-        padding-top: 5px;
+        margin-top: 5px;
         font-size: 11px;
         color: $white;
       }
