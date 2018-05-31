@@ -9,7 +9,7 @@
         .left-header__member
           Member : #{current_user.name}
       .right-header
-        = link_to 'Edit', "/groups/#{@group.id}/edit" , class: "right-header__button"
+        = link_to 'Edit', edit_group_path(@group), method: :get, class: 'right-header__button'
     .messages
       = render @messages
     .form

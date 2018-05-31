@@ -1,6 +1,6 @@
 $(function () {
 // インクリメンタルサーチで対象ユーザがいる場合の機能
-var user_list = $(".js-user-search-result");
+var user_list = $("#js-user-search-result");
 function appendUser(user) {
   var html = `<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user.name}</p>
@@ -36,7 +36,7 @@ function appendGroup(userId, userName) {
       dataType: 'json'
     })
     .done(function(users) {
-      $('.js-user-search-result').empty();
+      $('#js-user-search-result').empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
           appendUser(user);
@@ -51,7 +51,7 @@ function appendGroup(userId, userName) {
     })
   });
 // 検索ユーザの追加ボタンを押してチャットメンバー欄に追加する機能
-  $(".js-user-search-result").on('click','.chat-group-user__btn--add', function() {
+  $("#js-user-search-result").on('click','.chat-group-user__btn--add', function() {
     var userId = $(this).data("userId");
     var userName = $(this).data("userName");
     appendGroup(userId, userName);
