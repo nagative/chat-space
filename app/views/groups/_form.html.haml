@@ -17,15 +17,15 @@
       = f.label :name, "チャットメンバーを追加", class:'chat-group-form__label', for:"chat_group_チャットメンバーを追加"
     .chat-group-form__field--right
       .chat-group-form__search.clearfix
-        %input{class: 'chat-group-form__input js-user-search-field', placeholder: '追加したいユーザー名を入力してください', value:'', type:'text'}
-      #js-user-search-result
+        %input{class: 'chat-group-form__input', id: 'user-search-field', placeholder: '追加したいユーザー名を入力してください', value:'', type:'text'}
+      #user-search-result
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       = f.label :name, "チャットメンバー", class: 'chat-group-form__label', for:"chat_group_チャットメンバー"
     .chat-group-form__field--right
-      .chat-group-users.js-add-user
-        .chat-group-user.clearfix.js-chat-member
+      #chat-group-users
+        .chat-group-user.clearfix{id: 'chat-group-user-#{group.users.ids}'}
           %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{group.users.ids}"}/
           %p.chat-group-user__name
             = current_user.name
