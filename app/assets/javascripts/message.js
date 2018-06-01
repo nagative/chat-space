@@ -34,7 +34,6 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      var id = $('.message')
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.form__space').val('');
