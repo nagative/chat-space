@@ -26,7 +26,7 @@
     .chat-group-form__field--right
       #chat-group-users
         .chat-group-user.clearfix{id: 'chat-group-user-#{group.users.ids}'}
-          %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{group.users.ids}"}/
+          %input{:name => "group[user_ids][]", :type => "hidden"}
           %p.chat-group-user__name
             = current_user.name
           %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn{"data-user-id" => "#{group.users.ids}", "data-user-name" => "#{group.users.name}"}削除
