@@ -66,11 +66,11 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
-gem 'devise'
+gem 'devise', "~> 4.6.2"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog', '1.41.0'
